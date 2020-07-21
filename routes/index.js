@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', async (req, res) => {
-  res.json(level1)
+  res.status(200).json({ level1 })
 });
 
 var level1 = [

@@ -1,8 +1,11 @@
-const request = require("supertest");
-const app = require('../app');
+const supertest = require('supertest');
+const http = require('http')
+const app = require('../app')
 
 describe('Index router', () => {
-  const expectedResult = [
+  let server;
+  let request;
+  const expectedResult = {"level1": [
     ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
     ['B', 'F1', 'F11', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'B'],
     ['B', 'F1', 'F11', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'B'],
@@ -14,15 +17,20 @@ describe('Index router', () => {
     ['B', 'F1', 'F11', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'B'],
     ['B', 'F1', 'F11', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'B'],
     ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B']
-  ]
+  ]}
+  beforeAll((done) => {
+    server = http.createServer(app);
+    server.listen(done);
+    request = supertest(server);
+  });
 
-  test('it should return data', async (done) => {
-    const res = await request(app)
-    .get('/')
-    .expect('Content-Type', "application/json; charset=utf-8")
-    .expect('Content-Length', '862')
-      expect(res.statusCode).toEqual(200)
-      expect(res.body).toEqual(expectedResult)
-      done()
+  test('it should return data', async () => {
+    const res = await request.get('/');
+    expect(res.body).toEqual(expectedResult)
   })
+
+  afterAll((done) => {
+    server.close(done);
+  });
+
 })
