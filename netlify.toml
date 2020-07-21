@@ -1,3 +1,6 @@
+[[build]]
+    Command = npm start
+    
 [[redirects]]
   from = "/*"
   to = "/"
