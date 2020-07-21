@@ -1,6 +1,6 @@
 [[build]]
-    Command = npm start
-    
+    Command = "npm start"
+
 [[redirects]]
   from = "/*"
   to = "/"
