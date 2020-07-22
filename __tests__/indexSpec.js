@@ -30,7 +30,7 @@ describe('Index router', () => {
     ['B', 'B', 'F1', 'F1', 'PB', 'F1', 'PB', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
     ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B']
   ]}
-  
+
   beforeAll((done) => {
     server = http.createServer(app);
     server.listen(done);
@@ -43,7 +43,6 @@ describe('Index router', () => {
 
   test('it should return data', async () => {
     const res = await request.get('/');
-    console.log(res.body)
     expect(res.body).toEqual(expectedResult)
   })
 
