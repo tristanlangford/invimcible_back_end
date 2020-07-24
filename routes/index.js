@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
   res.status(200).json({ level1, level2 })
 });
 
+
 var level1 = [
   ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
   ['B', 'VS', 'F1', 'F1', 'F1', 'F1', 'I1', 'F1', 'F1', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B'],
@@ -19,6 +20,22 @@ var level1 = [
   ['B', 'B', 'F1', 'F1', 'F1', 'F1', 'B', 'B', 'F1', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B'],
   ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B']
 ]
+
+  for (var i=0; i < level1.length; i++) {
+    for (var j=0; j < level1[i].length; j++) {
+    if ((level1[i][j]) === "B"){
+      console.log(level1[i][j])
+      var x = 32
+    }
+    else if ((level1[i][j]) === "F1"){
+      console.log(level1[i][j])
+    }
+    else {
+      console.log(level1[i][j])
+    }
+  }
+}
+
 
 var level2 = [
   ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
