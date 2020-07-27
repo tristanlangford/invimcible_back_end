@@ -41,54 +41,43 @@ for (var i=0; i < level.length; i++) {
     for (var j=0; j < level[i].length; j++) {
     if ((level[i][j]) === "B"){
       var value = level[i][j]
-      var x = 32 * 13
-      var y = 32 * 6
+      var x = 32
+      var y = 32
       var blocked = true
     }
     else if ((level[i][j]) === "F1"){
       var value = level[i][j]
-      var x = 32 * 4
-      var y = 32
+      var x = 10
+      var y = 10
       var blocked = false
     }
     else if ((level[i][j]) === "P1"|| (level[i][j]) === "P2"){
       var value = level[i][j]
-      var x = 32
-      var y = 32
+      var x = 15
+      var y = 15
       var blocked = true
 
     }
     else {
       var value = level[i][j]
-      var x = 32
-      var y = 32
+      var x = 30
+      var y = 30
       var blocked = false
 
-    }
-    if (level[i][j] === "VS") {
-      var starting = {
-        x: j,
-        y: i
-      }
     }
     var object = {value: value, x:x, y:y, blocked: blocked}
     subArray.push(object)
 
   }
   arr.push(subArray)
-
 }
-output = {
-  startingPoint: starting,
-  mapArray: arr
-}
-return output
+return arr
 }
 
 var level1Data = addData(level1)
 var level2Data = addData(level2)
 
-module.exports = {
+module.exports= {
   addData: addData,
   router: router
 }
