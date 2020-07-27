@@ -26,7 +26,7 @@ describe('Index router', () => {
 
   test('it should return data', async () => {
     const res = await request.get('/');
-    expect(res.body.level1Data[0][1]).toEqual(expectedResult)
+    expect(res.body.level1Data.mapArray[0][1]).toEqual(expectedResult)
   })
 
   test("It should response the GET method", () => {
@@ -38,15 +38,15 @@ describe('Index router', () => {
   });
 
   test("It should return an object from a tile letter, 'B' ", () => {
-    expect(addData([["B"]])).toEqual([[expectedResult]])
+    expect(addData([["B"]]).mapArray).toEqual([[expectedResult]])
   })
   test("It should return an object from a tile letter, 'F1' ", () => {
-    expect(addData([["F1"]])).toEqual([[expectedResultF1]])
+    expect(addData([["F1"]]).mapArray).toEqual([[expectedResultF1]])
   })
   test("It should return an object from a tile letter, 'P1' ", () => {
-    expect(addData([["P1"]])).toEqual([[expectedResultP1]])
+    expect(addData([["P1"]]).mapArray).toEqual([[expectedResultP1]])
   })
   test("It should return an object from a tile letter, 'other' ", () => {
-    expect(addData([["something"]])).toEqual([[expectedResultOther]])
+    expect(addData([["something"]]).mapArray).toEqual([[expectedResultOther]])
   })
 });

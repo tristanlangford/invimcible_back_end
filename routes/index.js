@@ -65,18 +65,30 @@ for (var i=0; i < level.length; i++) {
       var blocked = false
 
     }
+    if (level[i][j] === "VS") {
+      var starting = {
+        x: j,
+        y: i
+      }
+    }
     var object = {value: value, x:x, y:y, blocked: blocked}
     subArray.push(object)
 
   }
   arr.push(subArray)
+
 }
-return arr
+output = {
+  startingPoint: starting,
+  mapArray: arr
+}
+return output
 }
 
 var level1Data = addData(level1)
 var level2Data = addData(level2)
 
+console.log(level1Data)
 module.exports= {
   addData: addData,
   router: router
