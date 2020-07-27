@@ -41,27 +41,27 @@ for (var i=0; i < level.length; i++) {
     for (var j=0; j < level[i].length; j++) {
     if ((level[i][j]) === "B"){
       var value = level[i][j]
-      var x = 32
-      var y = 32
+      var x = 32 * 13
+      var y = 32 * 6
       var blocked = true
     }
     else if ((level[i][j]) === "F1"){
       var value = level[i][j]
-      var x = 10
-      var y = 10
+      var x = 32 * 4
+      var y = 32
       var blocked = false
     }
     else if ((level[i][j]) === "P1"|| (level[i][j]) === "P2"){
       var value = level[i][j]
-      var x = 15
-      var y = 15
+      var x = 32
+      var y = 32
       var blocked = true
 
     }
     else {
       var value = level[i][j]
-      var x = 30
-      var y = 30
+      var x = 32
+      var y = 32
       var blocked = false
 
     }
@@ -88,8 +88,7 @@ return output
 var level1Data = addData(level1)
 var level2Data = addData(level2)
 
-console.log(level1Data)
-module.exports= {
+module.exports = {
   addData: addData,
   router: router
 }

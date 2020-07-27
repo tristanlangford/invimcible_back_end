@@ -8,10 +8,10 @@ const addData = imports.addData
 describe('Index router', () => {
   let server;
   let request;
-  const expectedResult = {"value": "B", "x": 32, "y": 32, "blocked": true}
-  const expectedResultF1 = {"value": "F1", "x": 10, "y": 10, "blocked": false}
-  const expectedResultP1 = {"value": "P1", "x": 15, "y": 15, "blocked": true}
-  const expectedResultOther = {"value": "something", "x": 30, "y": 30, "blocked": false}
+  const expectedResult = {"value": "B", "x": 13 * 32, "y": 6 * 32, "blocked": true}
+  const expectedResultF1 = {"value": "F1", "x": 4 * 32, "y": 1 * 32, "blocked": false}
+  const expectedResultP1 = {"value": "P1", "x": 1 * 32, "y": 1 * 32, "blocked": true}
+  const expectedResultOther = {"value": "something", "x": 1 * 32, "y": 1 * 32, "blocked": false}
 
 
   beforeAll((done) => {
