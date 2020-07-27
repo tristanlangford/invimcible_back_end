@@ -1,37 +1,19 @@
 const supertest = require('supertest');
 const http = require('http')
 const app = require('../app')
+const imports = require('../routes/index')
+const addData = imports.addData
+
 
 describe('Index router', () => {
   let server;
   let request;
-  const expectedResult = {"level1": [
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-    ['B', 'VS', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'I1', 'F1', 'F1', 'F1', 'F1', 'F1', 'E', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'P1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B']
-  ], "level2": [
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-    ['B', 'B', 'B', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'T', 'P2', 'B', 'B', 'B'],
-    ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-    ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-    ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-    ['B', 'B', 'B', 'PB', 'B', 'B', 'B', 'VS', 'I1', 'F1', 'PB', 'F1', 'PB', 'F1', 'F1', 'B'],
-    ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'P1', 'B', 'B', 'B', 'B', 'B', 'F1', 'B'],
-    ['B', 'B', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'F1', 'B'],
-    ['B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'F1', 'PB', 'F1', 'PB', 'F1', 'PB', 'F1', 'B'],
-    ['B', 'B', 'F1', 'F1', 'PB', 'F1', 'PB', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-    ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B']
-  ]}
+
+  const expectedResult = {"value": "B", "x": 13 * 32, "y": 6 * 32, "blocked": true}
+  const expectedResultF1 = {"value": "F1", "x": 4 * 32, "y": 1 * 32, "blocked": false}
+  const expectedResultP1 = {"value": "P1", "x": 1 * 32, "y": 1 * 32, "blocked": true}
+  const expectedResultOther = {"value": "something", "x": 1 * 32, "y": 1 * 32, "blocked": false}
+
 
   beforeAll((done) => {
     server = http.createServer(app);
@@ -45,7 +27,7 @@ describe('Index router', () => {
 
   test('it should return data', async () => {
     const res = await request.get('/');
-    expect(res.body).toEqual(expectedResult)
+    expect(res.body.level1Data.mapArray[0][1]).toEqual(expectedResult)
   })
 
   test("It should response the GET method", () => {
@@ -55,4 +37,17 @@ describe('Index router', () => {
         expect(response.statusCode).toBe(200);
       });
   });
+
+  test("It should return an object from a tile letter, 'B' ", () => {
+    expect(addData([["B"]]).mapArray).toEqual([[expectedResult]])
+  })
+  test("It should return an object from a tile letter, 'F1' ", () => {
+    expect(addData([["F1"]]).mapArray).toEqual([[expectedResultF1]])
+  })
+  test("It should return an object from a tile letter, 'P1' ", () => {
+    expect(addData([["P1"]]).mapArray).toEqual([[expectedResultP1]])
+  })
+  test("It should return an object from a tile letter, 'other' ", () => {
+    expect(addData([["something"]]).mapArray).toEqual([[expectedResultOther]])
+  })
 });

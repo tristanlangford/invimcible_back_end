@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', async (req, res) => {
-  res.status(200).json({ level1, level2 })
+  res.status(200).json({ level1Data, level2Data })
 });
 
 var level1 = [
@@ -36,6 +36,61 @@ var level2 = [
   ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B']
 ]
 
+function addData(level) {
+  var arr = []
+for (var i=0; i < level.length; i++) {
+  var subArray = []
+  for (var j=0; j < level[i].length; j++) {	 
+    if ((level[i][j]) === "B"){
+      var value = level[i][j]
+      var x = 32 * 13
+      var y = 32 * 6
+      var blocked = true
+    }	
+    else if ((level[i][j]) === "F1"){
+      var value = level[i][j]
+      var x = 32 * 4
+      var y = 32
+      var blocked = false
+    }
+    else if ((level[i][j]) === "P1"|| (level[i][j]) === "P2") {
+      var value = level[i][j]
+      var x = 32
+      var y = 32
+      var blocked = true
+    }
+    else {
+      var value = level[i][j]
+      var x = 32
+      var y = 32
+      var blocked = false
+    }
+    if (level[i][j] === "VS") {	
+      var starting = {	
+        x: j,	
+        y: i	
+      }	
+    }	
+    var object = {value: value, x:x, y:y, blocked: blocked}
+    subArray.push(object)
 
 
-module.exports = router;
+  }
+  arr.push(subArray)
+
+}
+output = {
+  startingPoint: starting,	
+  mapArray: arr	
+}	
+return output	
+}
+
+var level1Data = addData(level1)
+var level2Data = addData(level2)
+
+
+module.exports = {
+  addData: addData,
+  router: router
+}
