@@ -2,8 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', async (req, res) => {
-  res.status(200).json({ level1Data, level2Data })
+router.get('/:id', async (req, res) => {
+  if (req.params.id === '1' || req.params.id === '2') {
+    index = req.params.id - 1
+    res.status(200).json( addData(levels[index]) )
+  } else {
+    console.log("404")
+    res.status(404).json( null )
+  }
 });
 
 var level1 = [
@@ -22,6 +28,7 @@ var level1 = [
     ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B','B']
 ]
 
+
 var level2 = [
   ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
   ['B', 'B', 'B', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'T', 'P2', 'B', 'B', 'B'],
@@ -35,6 +42,8 @@ var level2 = [
   ['B', 'B', 'F1', 'F1', 'PB', 'F1', 'PB', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
   ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B']
 ]
+
+var levels = [level1, level2]
 
 function addData(level) {
   var arr = []
@@ -90,7 +99,5 @@ var level1Data = addData(level1)
 var level2Data = addData(level2)
 
 
-module.exports = {
-  addData: addData,
-  router: router
-}
+module.exports = router
+module.exports.addData = addData

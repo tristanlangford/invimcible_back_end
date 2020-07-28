@@ -26,13 +26,13 @@ describe('Index router', () => {
   });
 
   test('it should return data', async () => {
-    const res = await request.get('/');
-    expect(res.body.level1Data.mapArray[0][1]).toEqual(expectedResult)
+    const res = await request.get('/1');
+    expect(res.body.mapArray[0][1]).toEqual(expectedResult)
   })
 
   test("It should response the GET method", () => {
     return supertest(app)
-      .get("/")
+      .get("/1")
       .then(response => {
         expect(response.statusCode).toBe(200);
       });
