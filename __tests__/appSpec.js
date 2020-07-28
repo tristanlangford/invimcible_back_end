@@ -15,7 +15,15 @@ afterAll((done) => {
 
 test("It should response the GET method", () => {
   return supertest(app)
-    .get("/bob")
+    .get("/")
+    .then(response => {
+      expect(response.statusCode).toBe(404);
+    });
+});
+
+test("It should response the GET method, not currently a level", () => {
+  return supertest(app)
+    .get("/3")
     .then(response => {
       expect(response.statusCode).toBe(404);
     });
