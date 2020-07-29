@@ -1,18 +1,19 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET home page. */
-router.get('/:id', async (req, res) => {
-  if (req.params.id === '1' || req.params.id === '2') {
-    index = req.params.id - 1
-    res.status(200).json( addData(levels[index]) )
+router.get("/:id", async (req, res) => {
+  if (req.params.id === "1" || req.params.id === "2") {
+    index = req.params.id - 1;
+    res.status(200).json(addData(levels[index]));
   } else {
-    console.log("404")
-    res.status(404).json( null )
+    console.log("404");
+    res.status(404).json(null);
   }
 });
 
 var level1 = [
+<<<<<<< HEAD
   ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'WF', 'WF', 'WF', 'WF', 'W1', 'WD', 'WD', 'WD'],
     ['BS', 'VS', 'W2', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BR', 'BR', 'BR', 'BR', 'BS', 'W4', 'WU', 'WU', 'WU', 'WU', 'W4', 'W','W'],
     ['BS', 'PR', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'C1', 'W4', 'WU','WU'],
@@ -62,23 +63,208 @@ var level1 = [
 // W3 = SE
 // W4 = SW
 
-
-
 var level2 = [
-  ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-  ['B', 'B', 'B', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'PB', 'F1', 'T', 'P2', 'B', 'B', 'B'],
-  ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-  ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-  ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-  ['B', 'B', 'B', 'PB', 'B', 'B', 'B', 'VS', 'I1', 'F1', 'PB', 'F1', 'PB', 'F1', 'F1', 'B'],
-  ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'P1', 'B', 'B', 'B', 'B', 'B', 'F1', 'B'],
-  ['B', 'B', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'F1', 'B'],
-  ['B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'F1', 'PB', 'F1', 'PB', 'F1', 'PB', 'F1', 'B'],
-  ['B', 'B', 'F1', 'F1', 'PB', 'F1', 'PB', 'F1', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-  ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B']
-]
+  [
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "B",
+    "F1",
+    "F1",
+    "F1",
+    "F1",
+    "F1",
+    "F1",
+    "PB",
+    "F1",
+    "T",
+    "P2",
+    "B",
+    "B",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "B",
+    "F1",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "B",
+    "F1",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "B",
+    "F1",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "B",
+    "PB",
+    "B",
+    "B",
+    "B",
+    "VS",
+    "I1",
+    "F1",
+    "PB",
+    "F1",
+    "PB",
+    "F1",
+    "F1",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "B",
+    "F1",
+    "B",
+    "B",
+    "B",
+    "B",
+    "P1",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "F1",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "F1",
+    "F1",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "F1",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "F1",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "F1",
+    "PB",
+    "F1",
+    "PB",
+    "F1",
+    "PB",
+    "F1",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "F1",
+    "F1",
+    "PB",
+    "F1",
+    "PB",
+    "F1",
+    "F1",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+  ],
+  [
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+  ],
+];
 
-var levels = [level1, level2]
+var levels = [level1, level2];
 
 function addData(level) {
   var arr = []
@@ -243,22 +429,16 @@ for (var i=0; i < level.length; i++) {
     }	
     var object = {value: value, x:x, y:y, blocked: blocked}
     subArray.push(object)
-
-
   }
-  arr.push(subArray)
-
-}
-output = {
-  startingPoint: starting,	
-  mapArray: arr	
-}	
-return output	
+  output = {
+    startingPoint: starting,
+    mapArray: arr,
+  };
+  return output;
 }
 
-var level1Data = addData(level1)
-var level2Data = addData(level2)
+var level1Data = addData(level1);
+var level2Data = addData(level2);
 
-
-module.exports = router
-module.exports.addData = addData
+module.exports = router;
+module.exports.addData = addData;

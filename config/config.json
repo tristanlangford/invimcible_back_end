@@ -6,15 +6,11 @@
     "use_env_variable": "DATABASE_URL"
   },
   "test": {
-    "username": "student",
-    "password": null,
     "database": "save_data_test",
     "host": "localhost",
     "dialect": "postgres"
   },
   "production": {
-    "username": "student",
-    "password": null,
     "database": "saved_data",
     "host": "localhost",
     "dialect": "postgres",
