@@ -411,7 +411,7 @@ var level2 = [
     "SPR",
     "SPL",
     "SPU",
-    "SPU",
+    "PB",
     "SPU",
     "SPU",
     "BB",
