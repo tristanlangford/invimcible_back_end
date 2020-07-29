@@ -15,14 +15,14 @@ router.get("/:id", async (req, res) => {
 var level1 = [
   ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'WF', 'WF', 'WF', 'WF', 'W1', 'WD', 'WD', 'WD'],
     ['BS', 'VS', 'C2', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BR', 'BR', 'BR', 'BR', 'BS', 'W4', 'WU', 'WU', 'WU', 'WU', 'W4', 'W','W'],
-    ['BS', 'PR', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'C2', 'W4', 'WU','WU'],
+    ['BS', 'PR', 'GC', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'C2', 'W4', 'WU','WU'],
     ['BS', 'C4', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PR', 'PL', 'WR', 'WD','WD'],
     ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'PR', 'PL', 'WR', 'W','W'],
     ['BS', 'BS', 'C1', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'E', 'BS', 'BS', 'PR', 'PL', 'W4', 'WU','WU'],
     ['BS', 'BS', 'PR', 'PL', 'BT', 'BT', 'BT', 'BT', 'BT', 'BR', 'BR', 'BR', 'BS', 'W1', 'WD', 'WD', 'WD', 'W2', 'PR', 'S1', 'S1', 'S1', 'I1'],
     ['BS', 'BS', 'PR', 'PL', 'BT', 'BT', 'BT', 'BT', 'BT', 'BT', 'BT', 'BS', 'BS', 'WR', 'W', 'W', 'W', 'WL', 'PR', 'PL', 'B', 'B','B'],
     ['BS', 'BS', 'PR', 'PL', 'BS', 'BS', 'BS', 'BT', 'BT', 'BT', 'BS', 'BS', 'BS', 'W4', 'WU', 'WU', 'WU', 'W3', 'PR', 'PL','B', 'B', 'BS'],
-    ['BS', 'BS', 'PR', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PL', 'B', 'B','BS'],
+    ['BS', 'BS', 'PR', 'B', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PL', 'B', 'B','BS'],
     ['BS', 'BS', 'C4', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'C3', 'B', 'B','B'],
     ['WD', 'W2', 'W1', 'WD', 'W2', 'BT', 'BT', 'BT', 'BT', 'BT', 'BS', 'BS', 'BS', 'BR', 'BR', 'BR', 'BR', 'BS', 'B', 'B', 'B', 'BS','BS'],
     ['W', 'WL', 'WR', 'W', 'WL', 'BT', 'BT', 'BT', 'BT', 'BS', 'B', 'B', 'B', 'B', 'BT', 'BT', 'BT', 'BS', 'B', 'B', 'BT', 'BT','BT']
@@ -56,6 +56,7 @@ var level1 = [
 // C2 = NE
 // C3 = SE
 // C4 = SW
+// GC = grass corner
 
 // W1 = NW
 // W2 = NE
@@ -388,6 +389,12 @@ function addData(level) {
         var value = level[i][j]
         var x = 32 * 6
         var y = 32 * 3
+        var blocked = false
+      }
+      else if ((level[i][j]) === "GC"){
+        var value = level[i][j]
+        var x = 32 * 5
+        var y = 32 * 0
         var blocked = false
       }
       else if ((level[i][j]) === "W1"){
