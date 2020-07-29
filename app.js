@@ -3,8 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const { client } = require('./dbConfig');
+var dotenv = require('dotenv').config();
 
 var indexRouter = require('./routes/index');
+var saveRouter = require('./routes/save')
 // var usersRouter = require('./routes/users');
 
 var app = express();
@@ -20,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/save', saveRouter)
 // app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

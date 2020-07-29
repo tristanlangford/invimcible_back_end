@@ -1,0 +1,21 @@
+{
+  "development": {
+    "database": "save_data",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "student",
+    "password": null,
+    "database": "save_data_test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "student",
+    "password": null,
+    "database": "save_data_production",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
