@@ -16,6 +16,7 @@
     "password": null,
     "database": "save_data_production",
     "host": "localhost",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL"
   }
 }
