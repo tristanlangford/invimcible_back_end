@@ -430,12 +430,13 @@ for (var i=0; i < level.length; i++) {
     subArray.push(object)
   }
 }
+}
   output = {
     startingPoint: starting,
     mapArray: arr,
   };
   return output;
-}
+
 
 var level1Data = addData(level1);
 var level2Data = addData(level2);
