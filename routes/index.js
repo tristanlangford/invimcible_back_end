@@ -429,6 +429,7 @@ function addData(level) {
       var object = {value: value, x:x, y:y, blocked: blocked}
       subArray.push(object)
     }
+  arr.push(subArray)
   }
   output = {
     startingPoint: starting,
