@@ -10,6 +10,7 @@ async function save(level, position, saveName) {
 async function getSave(saveName) {
   console.log(saveName, 'getSave')
     const save =  await client.query(`SELECT * FROM saved_data`)
+    console.log(save, "save after db")
     return save.rows[0];
   }
 
