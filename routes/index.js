@@ -15,7 +15,7 @@ router.get("/:id", async (req, res) => {
 var level1 = [
   ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'WF', 'WF', 'WF', 'WF', 'W1', 'WD', 'WD', 'WD'],
     ['BS', 'VS', 'W2', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BR', 'BR', 'BR', 'BR', 'BS', 'W4', 'WU', 'WU', 'WU', 'WU', 'W4', 'W','W'],
-    ['BS', 'PR', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'C1', 'W4', 'WU','WU'],
+    ['BS', 'PR', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'C2', 'W4', 'WU','WU'],
     ['BS', 'C4', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PR', 'PL', 'WR', 'WD','WD'],
     ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'PR', 'PL', 'WR', 'W','W'],
     ['BS', 'BS', 'C1', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'E', 'BS', 'BS', 'PR', 'PL', 'W4', 'WU','WU'],
@@ -291,7 +291,7 @@ function addData(level) {
       else if ((level[i][j]) === "BS"){
         var value = level[i][j]
         var x = 32 * 6
-        var y = 32 * 1
+        var y = 34 * 1
         var blocked = true
       }
       else if ((level[i][j]) === "S1"){
