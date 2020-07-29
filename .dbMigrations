@@ -1,0 +1,1 @@
+CREATE TABLE saved_data (saveName VARCHAR(20), level INTEGER, position_X INTEGER, position_Y INTEGER);

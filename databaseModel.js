@@ -8,8 +8,9 @@ async function save(level, position, saveName) {
 }
 
 async function getSave(saveName) {
-    const save =  await client.query('SELECT * FROM saved_data WHERE saveName <> $1', [saveName])
-    return save;
+  console.log(saveName, 'getSave')
+    const save =  await client.query(`SELECT * FROM saved_data WHERE saveName = '${saveName}'`)
+    return save.rows[0];
   }
 
 

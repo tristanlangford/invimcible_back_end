@@ -10,6 +10,7 @@ router.post('/:id', async (req, res) => {
   });
 
   router.get('/:id', async (req, res) => {
+    console.log(req.params.id)
     databaseConnection.getSave(req.params.id).then(function(save) {
         res.status(200).json( save )  
     })  
