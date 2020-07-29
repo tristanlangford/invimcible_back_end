@@ -1,6 +1,6 @@
-### Vim Game Back-End
+## Vimcinvible Game - Back-End
 
-A backend API for the Vim game.
+To see the full layout and details of this app, please visit [this page.](https://github.com/RaeRachael/invimcible_front_end/)
 
 ## Level structure
 
