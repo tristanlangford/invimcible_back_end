@@ -509,7 +509,7 @@ var level2 = [
     "BB",
     "BB",
     "BB",
-    "SPR",
+    "VS",
     "SPL",
     "SPD",
     "SPD",
