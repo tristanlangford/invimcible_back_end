@@ -1,8 +1,9 @@
 {
   "development": {
-    "database": "save_data",
+    "database": "saved_data",
     "host": "localhost",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL"
   },
   "test": {
     "username": "student",
@@ -14,7 +15,7 @@
   "production": {
     "username": "student",
     "password": null,
-    "database": "save_data_production",
+    "database": "saved_data",
     "host": "localhost",
     "dialect": "postgres",
     "use_env_variable": "DATABASE_URL"

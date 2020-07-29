@@ -13,6 +13,7 @@ router.get('/:id', async (req, res) => {
 });
 
 var level1 = [
+<<<<<<< HEAD
   ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'WF', 'WF', 'WF', 'WF', 'W1', 'WD', 'WD', 'WD'],
     ['BS', 'VS', 'W2', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BR', 'BR', 'BR', 'BR', 'BS', 'W4', 'WU', 'WU', 'WU', 'WU', 'W4', 'W','W'],
     ['BS', 'PR', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'C1', 'W4', 'WU','WU'],
@@ -66,7 +67,7 @@ var level1 = [
 
 var level2 = [
   ['B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
-  ['B', 'B', 'B', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'T', 'P2', 'B', 'B', 'B'],
+  ['B', 'B', 'B', 'F1', 'F1', 'F1', 'F1', 'F1', 'F1', 'PB', 'F1', 'T', 'P2', 'B', 'B', 'B'],
   ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
   ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
   ['B', 'B', 'B', 'F1', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B', 'B'],
