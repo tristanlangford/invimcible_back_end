@@ -13,7 +13,6 @@ router.get('/:id', async (req, res) => {
 });
 
 var level1 = [
-<<<<<<< HEAD
   ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'WF', 'WF', 'WF', 'WF', 'W1', 'WD', 'WD', 'WD'],
     ['BS', 'VS', 'W2', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BR', 'BR', 'BR', 'BR', 'BS', 'W4', 'WU', 'WU', 'WU', 'WU', 'W4', 'W','W'],
     ['BS', 'PR', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'C1', 'W4', 'WU','WU'],
@@ -88,8 +87,8 @@ for (var i=0; i < level.length; i++) {
   for (var j=0; j < level[i].length; j++) {	 
     if ((level[i][j]) === "B"){
       var value = level[i][j]
-      var x = 32 * 8 
-      var y = 32 * 2
+      var x = 32 * 2 
+      var y = 32 * 8
       var blocked = true
     }	
     else if ((level[i][j]) === "BR"){
