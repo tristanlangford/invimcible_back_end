@@ -267,176 +267,175 @@ var levels = [level1, level2];
 
 function addData(level) {
   var arr = []
-for (var i=0; i < level.length; i++) {
-  var subArray = []
-  for (var j=0; j < level[i].length; j++) {	 
-    if ((level[i][j]) === "B"){
-      var value = level[i][j]
-      var x = 32 * 7 
-      var y = 32 * 1
-      var blocked = true
-    }	
-    else if ((level[i][j]) === "BR"){
-      var value = level[i][j]
-      var x = 32 * 7
-      var y = 32 * 0
-      var blocked = true
-    }
-    else if ((level[i][j]) === "BT"){
-      var value = level[i][j]
-      var x = 32 * 6
-      var y = 32 * 0
-      var blocked = true
-    }
-    else if ((level[i][j]) === "BS"){
-      var value = level[i][j]
-      var x = 32 * 6
-      var y = 32 * 1
-      var blocked = true
-    }
-    else if ((level[i][j]) === "S1"){
-      var value = level[i][j]
-      var x = 32 * 0
-      var y = 32 * 0
-      var blocked = false
-    }
-    else if ((level[i][j]) === "E"){
-      var value = level[i][j]
-      var x = 32 * 4
-      var y = 32 * 2
-      var blocked = false
-    }
-    else if ((level[i][j]) === "W"){
-      var value = level[i][j]
-      var x = 32 * 1
-      var y = 32 * 3
-      var blocked = true
-    }
-    else if ((level[i][j]) === "PU"){
-      var value = level[i][j]
-      var x = 32 * 0
-      var y = 32 * 1
-      var blocked = false
-    }
-    else if ((level[i][j]) === "PD"){
-      var value = level[i][j]
-      var x = 32 * 5
-      var y = 32 * 1
-      var blocked = false
-    }
-    else if ((level[i][j]) === "PR"){
-      var value = level[i][j]
-      var x = 32 * 1
-      var y = 32 * 1
-      var blocked = false
-    }
-    else if ((level[i][j]) === "PL"){
-      var value = level[i][j]
-      var x = 32 * 4
-      var y = 32 * 1
-      var blocked = false
-    }
-    else if ((level[i][j]) === "WU"){
-      var value = level[i][j]
-      var x = 32 * 4
-      var y = 32 * 3
-      var blocked = true
-    }
-    else if ((level[i][j]) === "WD"){
-      var value = level[i][j]
-      var x = 32 * 1
-      var y = 32 * 2
-      var blocked = true
-    }
-    else if ((level[i][j]) === "WR"){
-      var value = level[i][j]
-      var x = 32 * 0
-      var y = 32 * 3
-      var blocked = true
-    }
-    else if ((level[i][j]) === "WL"){
-      var value = level[i][j]
-      var x = 32 * 2
-      var y = 32 * 3
-      var blocked = true
-    }
-    else if ((level[i][j]) === "WF"){
-      var value = level[i][j]
-      var x = 32 * 2
-      var y = 32 * 1
-      var blocked = true
-    }
-    else if ((level[i][j]) === "C1"){
-      var value = level[i][j]
-      var x = 32 * 6
-      var y = 32 * 2
-      var blocked = false
-    }
-    else if ((level[i][j]) === "C2"){
-      var value = level[i][j]
-      var x = 32 * 7
-      var y = 32 * 2
-      var blocked = false
-    }
-    else if ((level[i][j]) === "C3"){
-      var value = level[i][j]
-      var x = 32 * 7
-      var y = 32 * 3
-      var blocked = false
-    }
-    else if ((level[i][j]) === "C4"){
-      var value = level[i][j]
-      var x = 32 * 6
-      var y = 32 * 3
-      var blocked = false
-    }
-    else if ((level[i][j]) === "W1"){
-      var value = level[i][j]
-      var x = 32 * 0
-      var y = 32 * 2
-      var blocked = true
-    }
-    else if ((level[i][j]) === "W2"){
-      var value = level[i][j]
-      var x = 32 * 2
-      var y = 32 * 2
-      var blocked = true
-    }
-    else if ((level[i][j]) === "W3"){
-      var value = level[i][j]
-      var x = 32 * 2
-      var y = 32 * 5
-      var blocked = true
-    }
-    else if ((level[i][j]) === "W4"){
-      var value = level[i][j]
-      var x = 32 * 3
-      var y = 32 * 3
-      var blocked = true
-    }
-    else {
-      var value = level[i][j]
-      var x = 32
-      var y = 32
-      var blocked = false
-    }
-    if (level[i][j] === "VS") {	
-      var starting = {	
-        x: j,	
-        y: i	
+  for (var i=0; i < level.length; i++) {
+    var subArray = []
+    for (var j=0; j < level[i].length; j++) {	 
+      if ((level[i][j]) === "B"){
+        var value = level[i][j]
+        var x = 32 * 7 
+        var y = 32 * 1
+        var blocked = true
       }	
-    }	
-    var object = {value: value, x:x, y:y, blocked: blocked}
-    subArray.push(object)
+      else if ((level[i][j]) === "BR"){
+        var value = level[i][j]
+        var x = 32 * 7
+        var y = 32 * 0
+        var blocked = true
+      }
+      else if ((level[i][j]) === "BT"){
+        var value = level[i][j]
+        var x = 32 * 6
+        var y = 32 * 0
+        var blocked = true
+      }
+      else if ((level[i][j]) === "BS"){
+        var value = level[i][j]
+        var x = 32 * 6
+        var y = 32 * 1
+        var blocked = true
+      }
+      else if ((level[i][j]) === "S1"){
+        var value = level[i][j]
+        var x = 32 * 0
+        var y = 32 * 0
+        var blocked = false
+      }
+      else if ((level[i][j]) === "E"){
+        var value = level[i][j]
+        var x = 32 * 4
+        var y = 32 * 2
+        var blocked = false
+      }
+      else if ((level[i][j]) === "W"){
+        var value = level[i][j]
+        var x = 32 * 1
+        var y = 32 * 3
+        var blocked = true
+      }
+      else if ((level[i][j]) === "PU"){
+        var value = level[i][j]
+        var x = 32 * 0
+        var y = 32 * 1
+        var blocked = false
+      }
+      else if ((level[i][j]) === "PD"){
+        var value = level[i][j]
+        var x = 32 * 5
+        var y = 32 * 1
+        var blocked = false
+      }
+      else if ((level[i][j]) === "PR"){
+        var value = level[i][j]
+        var x = 32 * 1
+        var y = 32 * 1
+        var blocked = false
+      }
+      else if ((level[i][j]) === "PL"){
+        var value = level[i][j]
+        var x = 32 * 4
+        var y = 32 * 1
+        var blocked = false
+      }
+      else if ((level[i][j]) === "WU"){
+        var value = level[i][j]
+        var x = 32 * 4
+        var y = 32 * 3
+        var blocked = true
+      }
+      else if ((level[i][j]) === "WD"){
+        var value = level[i][j]
+        var x = 32 * 1
+        var y = 32 * 2
+        var blocked = true
+      }
+      else if ((level[i][j]) === "WR"){
+        var value = level[i][j]
+        var x = 32 * 0
+        var y = 32 * 3
+        var blocked = true
+      }
+      else if ((level[i][j]) === "WL"){
+        var value = level[i][j]
+        var x = 32 * 2
+        var y = 32 * 3
+        var blocked = true
+      }
+      else if ((level[i][j]) === "WF"){
+        var value = level[i][j]
+        var x = 32 * 2
+        var y = 32 * 1
+        var blocked = true
+      }
+      else if ((level[i][j]) === "C1"){
+        var value = level[i][j]
+        var x = 32 * 6
+        var y = 32 * 2
+        var blocked = false
+      }
+      else if ((level[i][j]) === "C2"){
+        var value = level[i][j]
+        var x = 32 * 7
+        var y = 32 * 2
+        var blocked = false
+      }
+      else if ((level[i][j]) === "C3"){
+        var value = level[i][j]
+        var x = 32 * 7
+        var y = 32 * 3
+        var blocked = false
+      }
+      else if ((level[i][j]) === "C4"){
+        var value = level[i][j]
+        var x = 32 * 6
+        var y = 32 * 3
+        var blocked = false
+      }
+      else if ((level[i][j]) === "W1"){
+        var value = level[i][j]
+        var x = 32 * 0
+        var y = 32 * 2
+        var blocked = true
+      }
+      else if ((level[i][j]) === "W2"){
+        var value = level[i][j]
+        var x = 32 * 2
+        var y = 32 * 2
+        var blocked = true
+      }
+      else if ((level[i][j]) === "W3"){
+        var value = level[i][j]
+        var x = 32 * 2
+        var y = 32 * 5
+        var blocked = true
+      }
+      else if ((level[i][j]) === "W4"){
+        var value = level[i][j]
+        var x = 32 * 3
+        var y = 32 * 3
+        var blocked = true
+      }
+      else {
+        var value = level[i][j]
+        var x = 32
+        var y = 32
+        var blocked = false
+      }
+      if (level[i][j] === "VS") {	
+        var starting = {	
+          x: j,	
+          y: i	
+        }	
+      }	
+      var object = {value: value, x:x, y:y, blocked: blocked}
+      subArray.push(object)
+    }
   }
-}
-}
   output = {
     startingPoint: starting,
     mapArray: arr,
   };
   return output;
-
+}
 
 var level1Data = addData(level1);
 var level2Data = addData(level2);
