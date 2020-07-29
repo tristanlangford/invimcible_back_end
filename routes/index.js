@@ -429,6 +429,7 @@ for (var i=0; i < level.length; i++) {
     var object = {value: value, x:x, y:y, blocked: blocked}
     subArray.push(object)
   }
+}
   output = {
     startingPoint: starting,
     mapArray: arr,
@@ -440,4 +441,4 @@ var level1Data = addData(level1);
 var level2Data = addData(level2);
 
 module.exports = router;
-module.exports.addData = addData;
+module.exports.addData = addData
