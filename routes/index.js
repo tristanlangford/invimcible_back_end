@@ -13,20 +13,332 @@ router.get("/:id", async (req, res) => {
 });
 
 var level1 = [
-  ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'WF', 'WF', 'WF', 'WF', 'W1', 'WD', 'WD', 'WD'],
-    ['BS', 'VS', 'C2', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BR', 'BR', 'BR', 'BR', 'BS', 'W4', 'WU', 'WU', 'WU', 'WU', 'W4', 'W','W'],
-    ['BS', 'PR', 'GC', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'C2', 'W4', 'WU','WU'],
-    ['BS', 'C4', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PR', 'PL', 'WR', 'WD','WD'],
-    ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'PR', 'PL', 'WR', 'W','W'],
-    ['BS', 'BS', 'C1', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'E', 'BS', 'BS', 'PR', 'PL', 'W4', 'WU','WU'],
-    ['BS', 'BS', 'PR', 'PL', 'BT', 'BT', 'BT', 'BT', 'BT', 'BR', 'BR', 'BR', 'BS', 'W1', 'WD', 'WD', 'WD', 'W2', 'PR', 'S1', 'S1', 'S1', 'I1'],
-    ['BS', 'BS', 'PR', 'PL', 'BT', 'BT', 'BT', 'BT', 'BT', 'BT', 'BT', 'BS', 'BS', 'WR', 'W', 'W', 'W', 'WL', 'PR', 'PL', 'B', 'B','B'],
-    ['BS', 'BS', 'PR', 'PL', 'BS', 'BS', 'BS', 'BT', 'BT', 'BT', 'BS', 'BS', 'BS', 'W4', 'WU', 'WU', 'WU', 'W3', 'PR', 'PL','B', 'B', 'BS'],
-    ['BS', 'BS', 'PR', 'B', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PL', 'B', 'B','BS'],
-    ['BS', 'BS', 'C4', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'C3', 'B', 'B','B'],
-    ['WD', 'W2', 'W1', 'WD', 'W2', 'BT', 'BT', 'BT', 'BT', 'BT', 'BS', 'BS', 'BS', 'BR', 'BR', 'BR', 'BR', 'BS', 'B', 'B', 'B', 'BS','BS'],
-    ['W', 'WL', 'WR', 'W', 'WL', 'BT', 'BT', 'BT', 'BT', 'BS', 'B', 'B', 'B', 'B', 'BT', 'BT', 'BT', 'BS', 'B', 'B', 'BT', 'BT','BT']
-]
+  [
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "WF",
+    "WF",
+    "WF",
+    "WF",
+    "W1",
+    "WD",
+    "WD",
+    "WD",
+  ],
+  [
+    "BS",
+    "VS",
+    "C2",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BR",
+    "BR",
+    "BR",
+    "BR",
+    "BS",
+    "W4",
+    "WU",
+    "WU",
+    "WU",
+    "WU",
+    "W4",
+    "W",
+    "W",
+  ],
+  [
+    "BS",
+    "PR",
+    "GC",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "C2",
+    "W4",
+    "WU",
+    "WU",
+  ],
+  [
+    "BS",
+    "C4",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PR",
+    "PL",
+    "WR",
+    "WD",
+    "WD",
+  ],
+  [
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "BS",
+    "PR",
+    "PL",
+    "WR",
+    "W",
+    "W",
+  ],
+  [
+    "BS",
+    "BS",
+    "C1",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "E",
+    "BS",
+    "BS",
+    "PR",
+    "PL",
+    "W4",
+    "WU",
+    "WU",
+  ],
+  [
+    "BS",
+    "BS",
+    "PR",
+    "PL",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BR",
+    "BR",
+    "BR",
+    "BS",
+    "W1",
+    "WD",
+    "WD",
+    "WD",
+    "W2",
+    "PR",
+    "S1",
+    "S1",
+    "S1",
+    "I1",
+  ],
+  [
+    "BS",
+    "BS",
+    "PR",
+    "PL",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BS",
+    "BS",
+    "WR",
+    "W",
+    "W",
+    "W",
+    "WL",
+    "PR",
+    "PL",
+    "B",
+    "B",
+    "B",
+  ],
+  [
+    "BS",
+    "BS",
+    "PR",
+    "PL",
+    "BS",
+    "BS",
+    "BS",
+    "BT",
+    "BT",
+    "BT",
+    "BS",
+    "BS",
+    "BS",
+    "W4",
+    "WU",
+    "WU",
+    "WU",
+    "W3",
+    "PR",
+    "PL",
+    "B",
+    "B",
+    "BS",
+  ],
+  [
+    "BS",
+    "BS",
+    "PR",
+    "B",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PD",
+    "PL",
+    "B",
+    "B",
+    "BS",
+  ],
+  [
+    "BS",
+    "BS",
+    "C4",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "PU",
+    "C3",
+    "B",
+    "B",
+    "B",
+  ],
+  [
+    "WD",
+    "W2",
+    "W1",
+    "WD",
+    "W2",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BS",
+    "BS",
+    "BS",
+    "BR",
+    "BR",
+    "BR",
+    "BR",
+    "BS",
+    "B",
+    "B",
+    "B",
+    "BS",
+    "BS",
+  ],
+  [
+    "W",
+    "WL",
+    "WR",
+    "W",
+    "WL",
+    "BT",
+    "BT",
+    "BT",
+    "BT",
+    "BS",
+    "B",
+    "B",
+    "B",
+    "B",
+    "BT",
+    "BT",
+    "BT",
+    "BS",
+    "B",
+    "B",
+    "BT",
+    "BT",
+    "BT",
+  ],
+];
 
 // key:
 // VS = starting point
@@ -65,378 +377,562 @@ var level1 = [
 
 var level2 = [
   [
+    "SB",
+    "SB",
+    "SB",
     "B",
     "B",
     "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SPD",
+    "BB",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
+    "SB",
+    "SB",
+    "SB",
     "B",
     "B",
     "B",
-    "F1",
-    "F1",
-    "F1",
-    "F1",
-    "F1",
-    "F1",
-    "PB",
-    "F1",
-    "T",
-    "P2",
-    "B",
-    "B",
-    "B",
+    "SPR",
+    "SPL",
+    "SPU",
+    "SPU",
+    "SPU",
+    "SPU",
+    "BB",
+    "SPU",
+    "SC2",
+    "SC1",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
+    "SB",
+    "SB",
+    "SB",
     "B",
     "B",
     "B",
-    "F1",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
+    "SPR",
+    "SPL",
     "B",
     "B",
     "B",
     "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "SPR",
+    "SPL",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
+    "SB",
+    "SB",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SC3",
+    "SPL",
     "B",
     "B",
     "B",
-    "F1",
     "B",
     "B",
     "B",
     "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
+    "SPR",
+    "SPL",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
-    "B",
-    "B",
-    "B",
-    "F1",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
+    "SB",
+    "SB",
+    "I3",
+    "SPU",
+    "SPU",
+    "SPU",
+    "SC4",
+    "SPL",
     "B",
     "B",
     "B",
     "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "B",
+    "SPR",
+    "SPL",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
-    "B",
-    "B",
-    "B",
-    "PB",
-    "B",
-    "B",
-    "B",
-    "VS",
-    "I1",
-    "F1",
-    "PB",
-    "F1",
-    "PB",
-    "F1",
-    "F1",
-    "B",
+    "SB",
+    "BF",
+    "BF",
+    "BF",
+    "BB",
+    "BB",
+    "BB",
+    "SPR",
+    "SPL",
+    "SPD",
+    "SPD",
+    "SPD",
+    "SPD",
+    "BB",
+    "SC3",
+    "SC4",
+    "BB",
+    "BB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
-    "B",
-    "B",
-    "B",
-    "F1",
-    "B",
-    "B",
-    "B",
-    "B",
-    "P1",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "F1",
-    "B",
+    "SB",
+    "SB",
+    "SB",
+    "BF",
+    "BF",
+    "BF",
+    "SC4",
+    "SPU",
+    "SPU",
+    "SPU",
+    "SC2",
+    "SC1",
+    "SPU",
+    "SPU",
+    "BB",
+    "BB",
+    "SPU",
+    "SPU",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
-    "B",
-    "B",
-    "F1",
-    "F1",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "F1",
-    "B",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SPL",
+    "SPR",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
-    "B",
-    "B",
-    "F1",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "F1",
-    "PB",
-    "F1",
-    "PB",
-    "F1",
-    "PB",
-    "F1",
-    "B",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SPL",
+    "SPR",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
-    "B",
-    "B",
-    "F1",
-    "F1",
-    "PB",
-    "F1",
-    "PB",
-    "F1",
-    "F1",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SPL",
+    "SPR",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
   [
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
-    "B",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SPL",
+    "SPR",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+  ],
+  [
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SPL",
+    "SPR",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+  ],
+  [
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SPL",
+    "SPR",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
+    "SB",
   ],
 ];
+
+// key:
+
+// VS = starting point
+// E = End
+
+// SC1 = NW
+// SC2 = NE
+// SC3 = SE
+// SC4 = SW
+// SC = street corner
+
+// SPU = road up (road on top, street on bottom)
+// SPD = road down (road on bottom, street on top)
+// SPR = road right (road on right, street on left)
+// SPL = road left (road on left, street on right)
+
+// BB = blocker bin
+// BP = blocker Post box
+// BT = blocker Tree
+// BS = blocker stump
+//SB = street blocker
 
 var levels = [level1, level2];
 
 function addData(level) {
-  var arr = []
-  for (var i=0; i < level.length; i++) {
-    var subArray = []
-    for (var j=0; j < level[i].length; j++) {	 
-      if ((level[i][j]) === "B"){
-        var value = level[i][j]
-        var x = 32 * 7 
-        var y = 32 * 1
-        var blocked = true
-      }	
-      else if ((level[i][j]) === "BR"){
-        var value = level[i][j]
-        var x = 32 * 7
-        var y = 32 * 0
-        var blocked = true
+  var arr = [];
+  for (var i = 0; i < level.length; i++) {
+    var subArray = [];
+    for (var j = 0; j < level[i].length; j++) {
+      if (level[i][j] === "B") {
+        var value = level[i][j];
+        var x = 32 * 7;
+        var y = 32 * 1;
+        var blocked = true;
+      } else if (level[i][j] === "BR") {
+        var value = level[i][j];
+        var x = 32 * 7;
+        var y = 32 * 0;
+        var blocked = true;
+      } else if (level[i][j] === "BT") {
+        var value = level[i][j];
+        var x = 32 * 6;
+        var y = 32 * 0;
+        var blocked = true;
+      } else if (level[i][j] === "BS") {
+        var value = level[i][j];
+        var x = 32 * 6;
+        var y = 34 * 1;
+        var blocked = true;
+      } else if (level[i][j] === "S1") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 0;
+        var blocked = false;
+      } else if (level[i][j] === "E") {
+        var value = level[i][j];
+        var x = 32 * 4;
+        var y = 32 * 2;
+        var blocked = false;
+      } else if (level[i][j] === "W") {
+        var value = level[i][j];
+        var x = 32 * 1;
+        var y = 32 * 3;
+        var blocked = true;
+      } else if (level[i][j] === "PU") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 1;
+        var blocked = false;
+      } else if (level[i][j] === "PD") {
+        var value = level[i][j];
+        var x = 32 * 5;
+        var y = 32 * 1;
+        var blocked = false;
+      } else if (level[i][j] === "PR") {
+        var value = level[i][j];
+        var x = 32 * 1;
+        var y = 32 * 1;
+        var blocked = false;
+      } else if (level[i][j] === "PL") {
+        var value = level[i][j];
+        var x = 32 * 4;
+        var y = 32 * 1;
+        var blocked = false;
+      } else if (level[i][j] === "WU") {
+        var value = level[i][j];
+        var x = 32 * 4;
+        var y = 32 * 3;
+        var blocked = true;
+      } else if (level[i][j] === "WD") {
+        var value = level[i][j];
+        var x = 32 * 1;
+        var y = 32 * 2;
+        var blocked = true;
+      } else if (level[i][j] === "WR") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 3;
+        var blocked = true;
+      } else if (level[i][j] === "WL") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 3;
+        var blocked = true;
+      } else if (level[i][j] === "WF") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 1;
+        var blocked = true;
+      } else if (level[i][j] === "C1") {
+        var value = level[i][j];
+        var x = 32 * 6;
+        var y = 32 * 2;
+        var blocked = false;
+      } else if (level[i][j] === "C2") {
+        var value = level[i][j];
+        var x = 32 * 7;
+        var y = 32 * 2;
+        var blocked = false;
+      } else if (level[i][j] === "C3") {
+        var value = level[i][j];
+        var x = 32 * 7;
+        var y = 32 * 3;
+        var blocked = false;
+      } else if (level[i][j] === "C4") {
+        var value = level[i][j];
+        var x = 32 * 6;
+        var y = 32 * 3;
+        var blocked = false;
+      } else if (level[i][j] === "GC") {
+        var value = level[i][j];
+        var x = 32 * 5;
+        var y = 32 * 0;
+        var blocked = false;
+      } else if (level[i][j] === "W1") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 2;
+        var blocked = true;
+      } else if (level[i][j] === "W2") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 2;
+        var blocked = true;
+      } else if (level[i][j] === "W3") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 5;
+        var blocked = true;
+      } else if (level[i][j] === "W4") {
+        var value = level[i][j];
+        var x = 32 * 3;
+        var y = 32 * 3;
+        var blocked = true;
+      } else if (level[i][j] === "SB") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 6;
+        var blocked = true;
+      } else if (level[i][j] === "SPD") {
+        var value = level[i][j];
+        var x = 32 * 3;
+        var y = 32 * 7;
+        var blocked = false;
+      } else if (level[i][j] === "SPU") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 7;
+        var blocked = false;
+      } else if (level[i][j] === "BB") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 4;
+        var blocked = true;
+      } else if (level[i][j] === "I3") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 5;
+        var blocked = true;
+      } else if (level[i][j] === "SPR") {
+        var value = level[i][j];
+        var x = 32 * 5;
+        var y = 32 * 4;
+        var blocked = false;
+      } else if (level[i][j] === "SPL") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 7;
+        var blocked = false;
+      } else if (level[i][j] === "BF") {
+        var value = level[i][j];
+        var x = 32 * 4;
+        var y = 32 * 7;
+        var blocked = true;
+      } else if (level[i][j] === "SC1") {
+        var value = level[i][j];
+        var x = 32 * 6;
+        var y = 32 * 4;
+        var blocked = false;
+      } else if (level[i][j] === "SC2") {
+        var value = level[i][j];
+        var x = 32 * 7;
+        var y = 32 * 4;
+        var blocked = false;
+      } else if (level[i][j] === "SC3") {
+        var value = level[i][j];
+        var x = 32 * 4;
+        var y = 32 * 4;
+        var blocked = false;
+      } else if (level[i][j] === "SC4") {
+        var value = level[i][j];
+        var x = 32 * 1;
+        var y = 32 * 7;
+        var blocked = false;
+      } else {
+        var value = level[i][j];
+        var x = 32;
+        var y = 32;
+        var blocked = false;
       }
-      else if ((level[i][j]) === "BT"){
-        var value = level[i][j]
-        var x = 32 * 6
-        var y = 32 * 0
-        var blocked = true
+      if (level[i][j] === "VS") {
+        var starting = {
+          x: j,
+          y: i,
+        };
       }
-      else if ((level[i][j]) === "BS"){
-        var value = level[i][j]
-        var x = 32 * 6
-        var y = 34 * 1
-        var blocked = true
-      }
-      else if ((level[i][j]) === "S1"){
-        var value = level[i][j]
-        var x = 32 * 0
-        var y = 32 * 0
-        var blocked = false
-      }
-      else if ((level[i][j]) === "E"){
-        var value = level[i][j]
-        var x = 32 * 4
-        var y = 32 * 2
-        var blocked = false
-      }
-      else if ((level[i][j]) === "W"){
-        var value = level[i][j]
-        var x = 32 * 1
-        var y = 32 * 3
-        var blocked = true
-      }
-      else if ((level[i][j]) === "PU"){
-        var value = level[i][j]
-        var x = 32 * 0
-        var y = 32 * 1
-        var blocked = false
-      }
-      else if ((level[i][j]) === "PD"){
-        var value = level[i][j]
-        var x = 32 * 5
-        var y = 32 * 1
-        var blocked = false
-      }
-      else if ((level[i][j]) === "PR"){
-        var value = level[i][j]
-        var x = 32 * 1
-        var y = 32 * 1
-        var blocked = false
-      }
-      else if ((level[i][j]) === "PL"){
-        var value = level[i][j]
-        var x = 32 * 4
-        var y = 32 * 1
-        var blocked = false
-      }
-      else if ((level[i][j]) === "WU"){
-        var value = level[i][j]
-        var x = 32 * 4
-        var y = 32 * 3
-        var blocked = true
-      }
-      else if ((level[i][j]) === "WD"){
-        var value = level[i][j]
-        var x = 32 * 1
-        var y = 32 * 2
-        var blocked = true
-      }
-      else if ((level[i][j]) === "WR"){
-        var value = level[i][j]
-        var x = 32 * 0
-        var y = 32 * 3
-        var blocked = true
-      }
-      else if ((level[i][j]) === "WL"){
-        var value = level[i][j]
-        var x = 32 * 2
-        var y = 32 * 3
-        var blocked = true
-      }
-      else if ((level[i][j]) === "WF"){
-        var value = level[i][j]
-        var x = 32 * 2
-        var y = 32 * 1
-        var blocked = true
-      }
-      else if ((level[i][j]) === "C1"){
-        var value = level[i][j]
-        var x = 32 * 6
-        var y = 32 * 2
-        var blocked = false
-      }
-      else if ((level[i][j]) === "C2"){
-        var value = level[i][j]
-        var x = 32 * 7
-        var y = 32 * 2
-        var blocked = false
-      }
-      else if ((level[i][j]) === "C3"){
-        var value = level[i][j]
-        var x = 32 * 7
-        var y = 32 * 3
-        var blocked = false
-      }
-      else if ((level[i][j]) === "C4"){
-        var value = level[i][j]
-        var x = 32 * 6
-        var y = 32 * 3
-        var blocked = false
-      }
-      else if ((level[i][j]) === "GC"){
-        var value = level[i][j]
-        var x = 32 * 5
-        var y = 32 * 0
-        var blocked = false
-      }
-      else if ((level[i][j]) === "W1"){
-        var value = level[i][j]
-        var x = 32 * 0
-        var y = 32 * 2
-        var blocked = true
-      }
-      else if ((level[i][j]) === "W2"){
-        var value = level[i][j]
-        var x = 32 * 2
-        var y = 32 * 2
-        var blocked = true
-      }
-      else if ((level[i][j]) === "W3"){
-        var value = level[i][j]
-        var x = 32 * 2
-        var y = 32 * 5
-        var blocked = true
-      }
-      else if ((level[i][j]) === "W4"){
-        var value = level[i][j]
-        var x = 32 * 3
-        var y = 32 * 3
-        var blocked = true
-      }
-      else {
-        var value = level[i][j]
-        var x = 32
-        var y = 32
-        var blocked = false
-      }
-      if (level[i][j] === "VS") {	
-        var starting = {	
-          x: j,	
-          y: i	
-        }	
-      }	
-      var object = {value: value, x:x, y:y, blocked: blocked}
-      subArray.push(object)
+      var object = { value: value, x: x, y: y, blocked: blocked };
+      subArray.push(object);
     }
-  arr.push(subArray)
+    arr.push(subArray);
   }
   output = {
     startingPoint: starting,
@@ -449,4 +945,4 @@ var level1Data = addData(level1);
 var level2Data = addData(level2);
 
 module.exports = router;
-module.exports.addData = addData
+module.exports.addData = addData;
