@@ -1,7 +1,5 @@
 {
   "development": {
-    "username": "student",
-    "password": null,
     "database": "save_data",
     "host": "localhost",
     "dialect": "postgres"
