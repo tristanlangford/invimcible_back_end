@@ -19,7 +19,7 @@ var level1 = [
     ['BS', 'C4', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PU', 'PR', 'PL', 'WR', 'WD','WD'],
     ['BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'BS', 'PR', 'PL', 'WR', 'W','W'],
     ['BS', 'BS', 'C1', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'E', 'BS', 'BS', 'PR', 'PL', 'W4', 'WU','WU'],
-    ['BS', 'BS', 'PR', 'PL', 'BT', 'BT', 'BT', 'BT', 'BT', 'BR', 'BR', 'BR', 'BR', 'BS', 'W1', 'WD', 'WD', 'WD', 'W2', 'PR', 'S1', 'S1','I1'],
+    ['BS', 'BS', 'PR', 'PL', 'BT', 'BT', 'BT', 'BT', 'BT', 'BR', 'BR', 'BR', 'BS', 'W1', 'WD', 'WD', 'WD', 'W2', 'PR', 'S1', 'S1', 'S1', 'I1'],
     ['BS', 'BS', 'PR', 'PL', 'BT', 'BT', 'BT', 'BT', 'BT', 'BT', 'BT', 'BS', 'BS', 'WR', 'W', 'W', 'W', 'WL', 'PR', 'PL', 'B', 'B','B'],
     ['BS', 'BS', 'PR', 'PL', 'BS', 'BS', 'BS', 'BT', 'BT', 'BT', 'BS', 'BS', 'BS', 'W4', 'WU', 'WU', 'WU', 'W3', 'PR', 'PL','B', 'B', 'BS'],
     ['BS', 'BS', 'PR', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PD', 'PL', 'B', 'B','BS'],
