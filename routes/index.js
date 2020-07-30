@@ -186,7 +186,7 @@ var level1 = [
     "S1",
     "S1",
     "S1",
-    "I1",
+    "P1",
   ],
   [
     "BS",
@@ -879,18 +879,18 @@ function addData(level) {
         var blocked = true;
       } else if (level[i][j] === "P3") {
         var value = level[i][j];
-        var x = 32 * 0;
-        var y = 32 * 5;
+        var x = 32 * 7;
+        var y = 32 * 8;
         var blocked = true;
       } else if (level[i][j] === "P2") {
         var value = level[i][j];
-        var x = 32 * 0;
-        var y = 32 * 5;
+        var x = 32 * 5;
+        var y = 32 * 8;
         var blocked = true;
       } else if (level[i][j] === "P1") {
         var value = level[i][j];
-        var x = 32 * 0;
-        var y = 32 * 5;
+        var x = 32 * 6;
+        var y = 32 * 8;
         var blocked = true;
       } else if (level[i][j] === "SPR") {
         var value = level[i][j];
@@ -931,6 +931,26 @@ function addData(level) {
         var value = level[i][j];
         var x = 32 * 1;
         var y = 32 * 7;
+        var blocked = false;
+      } else if (level[i][j] === "SC5") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 8;
+        var blocked = false;
+      } else if (level[i][j] === "SC6") {
+        var value = level[i][j];
+        var x = 32 * 1;
+        var y = 32 * 8;
+        var blocked = false;
+      } else if (level[i][j] === "SC7") {
+        var value = level[i][j];
+        var x = 32 * 0;
+        var y = 32 * 8;
+      } else if (level[i][j] === "SC8") {
+        var value = level[i][j];
+        var x = 32 * 3;
+        var y = 32 * 8;
+        var blocked = false;
         var blocked = false;
       } else if (level[i][j] === "H1") {
         var value = level[i][j];
