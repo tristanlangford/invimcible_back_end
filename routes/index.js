@@ -927,6 +927,51 @@ function addData(level) {
         var x = 32 * 1;
         var y = 32 * 7;
         var blocked = false;
+      } else if (level[i][j] === "H1") {
+        var value = level[i][j];
+        var x = 32 * 1;
+        var y = 32 * 4;
+        var blocked = true;
+      } else if (level[i][j] === "H2") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 4;
+        var blocked = true;
+      } else if (level[i][j] === "H3") {
+        var value = level[i][j];
+        var x = 32 * 3;
+        var y = 32 * 4;
+        var blocked = true;
+      } else if (level[i][j] === "H4") {
+        var value = level[i][j];
+        var x = 32 * 1;
+        var y = 32 * 5;
+        var blocked = true;
+      } else if (level[i][j] === "H5") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 5;
+        var blocked = true;
+      } else if (level[i][j] === "H6") {
+        var value = level[i][j];
+        var x = 32 * 3;
+        var y = 32 * 5;
+        var blocked = true;
+      } else if (level[i][j] === "H7") {
+        var value = level[i][j];
+        var x = 32 * 1;
+        var y = 32 * 6;
+        var blocked = true;
+      } else if (level[i][j] === "H8") {
+        var value = level[i][j];
+        var x = 32 * 2;
+        var y = 32 * 6;
+        var blocked = true;
+      } else if (level[i][j] === "H9") {
+        var value = level[i][j];
+        var x = 32 * 3;
+        var y = 32 * 6;
+        var blocked = true;
       } else {
         var value = level[i][j];
         var x = 32;
