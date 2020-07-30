@@ -396,9 +396,9 @@ var level2 = [
     "SPD",
     "SPD",
     "SC4",
-    "SB",
-    "SB",
-    "SB",
+    "H1",
+    "H2",
+    "H3",
     "SB",
   ],
   [
@@ -421,10 +421,10 @@ var level2 = [
     "SPU",
     "SC2",
     "SPL",
+    "H4",
+    "H5",
+    "H6",
     "SB",
-    "SB",
-    "SB",
-    "SB"
   ],
   [
     "H7",
@@ -446,9 +446,9 @@ var level2 = [
     "B",
     "SPR",
     "SPL",
-    "SB",
-    "SB",
-    "SB",
+    "H7",
+    "H8",
+    "H9",
     "SB"
   ],
   [
@@ -471,7 +471,7 @@ var level2 = [
     "B",
     "SPR",
     "SPL",
-    "SB",
+    "S",
     "SH1",
     "SH2",
     "SH3"
@@ -496,7 +496,7 @@ var level2 = [
     "B",
     "SPR",
     "SPL",
-    "SB",
+    "S",
     "SH4",
     "SH5",
     "SH6"
