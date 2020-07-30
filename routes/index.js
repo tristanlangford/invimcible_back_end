@@ -569,7 +569,7 @@ var level2 = [
     "SB",
     "SB",
     "SB",
-    "SB",
+    "B",
     "SB",
     "SB",
     "SB",
