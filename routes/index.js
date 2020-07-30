@@ -850,7 +850,7 @@ function addData(level) {
       } else if (level[i][j] === "W3") {
         var value = level[i][j];
         var x = 32 * 5;
-        var y = 32 * 4;
+        var y = 32 * 3;
         var blocked = true;
       } else if (level[i][j] === "W4") {
         var value = level[i][j];
