@@ -935,17 +935,17 @@ function addData(level) {
       } else if (level[i][j] === "H1") {
         var value = level[i][j];
         var x = 32 * 1;
-        var y = 34 * 4;
+        var y = 32 * 4;
         var blocked = true;
       } else if (level[i][j] === "H2") {
         var value = level[i][j];
         var x = 32 * 2;
-        var y = 34 * 4;
+        var y = 32 * 4;
         var blocked = true;
       } else if (level[i][j] === "H3") {
         var value = level[i][j];
         var x = 32 * 3;
-        var y = 34 * 4;
+        var y = 32 * 4;
         var blocked = true;
       } else if (level[i][j] === "H4") {
         var value = level[i][j];
@@ -980,17 +980,17 @@ function addData(level) {
       } else if (level[i][j] === "SH1") {
         var value = level[i][j];
         var x = 32 * 5;
-        var y = 32 * 5;
+        var y = 34 * 5;
         var blocked = true;
       } else if (level[i][j] === "SH2") {
         var value = level[i][j];
         var x = 32 * 6;
-        var y = 32 * 5;
+        var y = 34 * 5;
         var blocked = true;
       } else if (level[i][j] === "SH3") {
         var value = level[i][j];
         var x = 32 * 7;
-        var y = 32 * 5;
+        var y = 34 * 5;
         var blocked = true;
       } else if (level[i][j] === "SH4") {
         var value = level[i][j];
