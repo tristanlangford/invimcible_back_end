@@ -594,12 +594,12 @@ var level2 = [
     "SB",
     "SB",
     "SB",
-    "SB",
-    "SB",
-    "W3",
-    "WU",
-    "WU",
-    "WU",
+    "B",
+    "W1",
+    "WD",
+    "WD",
+    "WD",
+    "WD",
   ],
   [
     "S",
@@ -619,9 +619,9 @@ var level2 = [
     "SB",
     "SB",
     "SB",
-    "SB",
-    "SB",
+    "B",
     "WR",
+    "W",
     "W",
     "W",
     "W",
@@ -644,12 +644,12 @@ var level2 = [
     "SH1",
     "SH2",
     "SH3",
-    "SB",
-    "SB",
-    "SB",
-    "SB",
-    "SB",
-    "SB",
+    "B",
+    "W4",
+    "WU",
+    "WU",
+    "WU",
+    "WU",
   ],
   [
     "H4",
@@ -934,22 +934,22 @@ function addData(level) {
         var blocked = false;
       } else if (level[i][j] === "SC5") {
         var value = level[i][j];
-        var x = 32 * 2;
-        var y = 32 * 8;
+        var x = 33 * 2;
+        var y = 33 * 8;
         var blocked = false;
       } else if (level[i][j] === "SC6") {
         var value = level[i][j];
-        var x = 32 * 1;
-        var y = 32 * 8;
+        var x = 33 * 1;
+        var y = 33 * 8;
         var blocked = false;
       } else if (level[i][j] === "SC7") {
         var value = level[i][j];
-        var x = 32 * 0;
-        var y = 32 * 8;
+        var x = 33 * 0;
+        var y = 33 * 8;
       } else if (level[i][j] === "SC8") {
         var value = level[i][j];
-        var x = 32 * 3;
-        var y = 32 * 8;
+        var x = 33 * 3;
+        var y = 33 * 8;
         var blocked = false;
         var blocked = false;
       } else if (level[i][j] === "H1") {
