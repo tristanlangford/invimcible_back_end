@@ -452,7 +452,7 @@ var level2 = [
     "SB"
   ],
   [
-    "SB",
+    "SPD",
     "SPD",
     "SPD",
     "SPD",
@@ -477,8 +477,8 @@ var level2 = [
     "SB"
   ],
   [
-    "SB",
-    "P3",
+    "S",
+    "SC1",
     "SPU",
     "SPU",
     "SPU",
@@ -502,8 +502,8 @@ var level2 = [
     "SB"
   ],
   [
-    "SB",
-    "BF",
+    "S",
+    "P3",
     "BF",
     "BF",
     "BB",
@@ -907,6 +907,11 @@ function addData(level) {
         var x = 32 * 4;
         var y = 32 * 7;
         var blocked = true;
+      } else if (level[i][j] === "S") {
+        var value = level[i][j];
+        var x = 32 * 4;
+        var y = 32 * 6;
+        var blocked = false;
       } else if (level[i][j] === "SC1") {
         var value = level[i][j];
         var x = 32 * 6;
