@@ -877,17 +877,17 @@ function addData(level) {
         var x = 32 * 0;
         var y = 32 * 4;
         var blocked = true;
-      } else if (level[i][j] === "I3") {
+      } else if (level[i][j] === "P3") {
         var value = level[i][j];
         var x = 32 * 0;
         var y = 32 * 5;
         var blocked = true;
-      } else if (level[i][j] === "I2") {
+      } else if (level[i][j] === "P2") {
         var value = level[i][j];
         var x = 32 * 0;
         var y = 32 * 5;
         var blocked = true;
-      } else if (level[i][j] === "I1") {
+      } else if (level[i][j] === "P1") {
         var value = level[i][j];
         var x = 32 * 0;
         var y = 32 * 5;
