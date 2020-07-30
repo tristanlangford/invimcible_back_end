@@ -231,7 +231,7 @@ var level1 = [
     "WU",
     "WU",
     "WU",
-    "I2",
+    "W3",
     "PR",
     "PL",
     "B",
@@ -849,8 +849,8 @@ function addData(level) {
         var blocked = true;
       } else if (level[i][j] === "W3") {
         var value = level[i][j];
-        var x = 32 * 2;
-        var y = 32 * 5;
+        var x = 32 * 5;
+        var y = 32 * 4;
         var blocked = true;
       } else if (level[i][j] === "W4") {
         var value = level[i][j];
