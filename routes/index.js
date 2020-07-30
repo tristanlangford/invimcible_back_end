@@ -934,22 +934,22 @@ function addData(level) {
         var blocked = false;
       } else if (level[i][j] === "SC5") {
         var value = level[i][j];
-        var x = 33 * 2;
-        var y = 33 * 8;
+        var x = 32 * 2;
+        var y = 32 * 8;
         var blocked = false;
       } else if (level[i][j] === "SC6") {
         var value = level[i][j];
-        var x = 33 * 1;
-        var y = 33 * 8;
+        var x = 32 * 1;
+        var y = 32 * 8;
         var blocked = false;
       } else if (level[i][j] === "SC7") {
         var value = level[i][j];
-        var x = 33 * 0;
-        var y = 33 * 8;
+        var x = 32 * 0;
+        var y = 32 * 8;
       } else if (level[i][j] === "SC8") {
         var value = level[i][j];
-        var x = 33 * 3;
-        var y = 33 * 8;
+        var x = 32 * 3;
+        var y = 32 * 8;
         var blocked = false;
         var blocked = false;
       } else if (level[i][j] === "H1") {
