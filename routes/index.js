@@ -472,9 +472,9 @@ var level2 = [
     "SPR",
     "SPL",
     "SB",
-    "SB",
-    "SB",
-    "SB"
+    "SH1",
+    "SH2",
+    "SH3"
   ],
   [
     "S",
@@ -497,9 +497,9 @@ var level2 = [
     "SPR",
     "SPL",
     "SB",
-    "SB",
-    "SB",
-    "SB"
+    "SH4",
+    "SH5",
+    "SH6"
   ],
   [
     "S",
@@ -975,6 +975,36 @@ function addData(level) {
       } else if (level[i][j] === "H9") {
         var value = level[i][j];
         var x = 32 * 3;
+        var y = 32 * 6;
+        var blocked = true;
+      } else if (level[i][j] === "SH1") {
+        var value = level[i][j];
+        var x = 32 * 5;
+        var y = 32 * 5;
+        var blocked = true;
+      } else if (level[i][j] === "SH2") {
+        var value = level[i][j];
+        var x = 32 * 6;
+        var y = 32 * 5;
+        var blocked = true;
+      } else if (level[i][j] === "SH3") {
+        var value = level[i][j];
+        var x = 32 * 7;
+        var y = 32 * 5;
+        var blocked = true;
+      } else if (level[i][j] === "SH4") {
+        var value = level[i][j];
+        var x = 32 * 5;
+        var y = 32 * 6;
+        var blocked = true;
+      } else if (level[i][j] === "SH5") {
+        var value = level[i][j];
+        var x = 32 * 6;
+        var y = 32 * 6;
+        var blocked = true;
+      } else if (level[i][j] === "SH6") {
+        var value = level[i][j];
+        var x = 32 * 7;
         var y = 32 * 6;
         var blocked = true;
       } else {
