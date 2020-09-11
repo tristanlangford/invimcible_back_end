@@ -750,7 +750,7 @@ function addData(level) {
       } else if (level[i][j] === "BS") {
         var value = level[i][j];
         var x = 32 * 6;
-        var y = 34 * 1;
+        var y = 32 * 1;
         var blocked = true;
       } else if (level[i][j] === "S1") {
         var value = level[i][j];

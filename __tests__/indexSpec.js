@@ -9,9 +9,9 @@ describe('Index router', () => {
   let server;
   let request;
 
-  const expectedResult = {"value": "B", "x": 13 * 32, "y": 6 * 32, "blocked": true}
-  const expectedResultF1 = {"value": "F1", "x": 4 * 32, "y": 1 * 32, "blocked": false}
-  const expectedResultP1 = {"value": "P1", "x": 1 * 32, "y": 1 * 32, "blocked": true}
+  const expectedResult = {"value": "BS", "x": 6 * 32, "y": 1 * 32, "blocked": true}
+  const expectedResultF1 = {"value": "E", "x": 4 * 32, "y": 2 * 32, "blocked": false}
+  const expectedResultP1 = {"value": "P1", "x": 6 * 32, "y": 8 * 32, "blocked": true}
   const expectedResultOther = {"value": "something", "x": 1 * 32, "y": 1 * 32, "blocked": false}
 
 
@@ -38,11 +38,11 @@ describe('Index router', () => {
       });
   });
 
-  test("It should return an object from a tile letter, 'B' ", () => {
-    expect(addData([["B"]]).mapArray).toEqual([[expectedResult]])
+  test("It should return an object from a tile letter, 'BS' ", () => {
+    expect(addData([["BS"]]).mapArray).toEqual([[expectedResult]])
   })
-  test("It should return an object from a tile letter, 'F1' ", () => {
-    expect(addData([["F1"]]).mapArray).toEqual([[expectedResultF1]])
+  test("It should return an object from a tile letter, 'E' ", () => {
+    expect(addData([["E"]]).mapArray).toEqual([[expectedResultF1]])
   })
   test("It should return an object from a tile letter, 'P1' ", () => {
     expect(addData([["P1"]]).mapArray).toEqual([[expectedResultP1]])
