@@ -732,6 +732,12 @@ function addData(level) {
   for (var i = 0; i < level.length; i++) {
     var subArray = [];
     for (var j = 0; j < level[i].length; j++) {
+      if (level[i][j] === "VS") {
+        var starting = {
+          x: j,
+          y: i,
+        };
+      }
       if (level[i][j] === "B") {
         var value = level[i][j];
         var x = 32 * 7;
@@ -1032,12 +1038,6 @@ function addData(level) {
         var x = 32;
         var y = 32;
         var blocked = false;
-      }
-      if (level[i][j] === "VS") {
-        var starting = {
-          x: j,
-          y: i,
-        };
       }
       var object = { value: value, x: x, y: y, blocked: blocked };
       subArray.push(object);
